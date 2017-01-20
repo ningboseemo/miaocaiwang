@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="always" name="referrer">
+	<title>瞄财网</title>
+	<meta name="keywords" content="">
+	<meta name="discription" content="">
+	<link rel="shortcut icon" href="images/miaocai_icon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/uploadify.css">
+
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div class="inside_top">
+		<div class="content">
+			<a href="index.html"><img src="images/logo.png"></a>
+			<h1>欢迎注册</h1>
+			<span class="rg register_login">已有账号 <a href="http://www.miaocaiwang.com/index.php?do=login"> 请登录</a></span>
+		</div>
+	</div>
+	<div class="content register">
+		<div class="office_register">
+			<div class="office_register_item">
+				<label><i>*</i>账号：</label>
+				<input type="text" maxlength="12" name="" id="office-username" placeholder="请输入登录账号（6-12位数字或字母）">
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>密码：</label>
+				<input type="password" maxlength="16" name="" id="office-password" placeholder="请设置您的登录密码">
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>确认密码：</label>
+				<input type="password" maxlength="16" name="" id="office-repassword" placeholder="请确认您的登录名密码">
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>邮箱：</label>
+				<input type="text" name="" id="office-email" placeholder="请设置您的关联邮箱">
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>邀请人用户名：</label>
+				<input type="text" name="" id="office-inviter" placeholder="请输入邀请人用户名">
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>姓名：</label>
+				<input type="text" name="" id="office-name" placeholder="请输入网络事务所名称">
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>个人简介：</label>
+				<textarea name="" id="office-detail" placeholder="请输入事务所相关简介"></textarea>
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>注册地区：</label>
+				<div class="register_province">
+					<span>选择省份</span>
+					<b class="glyphicon glyphicon-play"></b>
+					<ul style="display: none;" class="province_list">
+						<li>北京市</li>
+						<li>河北省</li>
+						<li>上海市</li>
+					</ul>
+				</div>
+				<div class="register_city">
+					<span>选择城市</span>
+					<b class="glyphicon glyphicon-play"></b>
+					<ul style="display: none;" class="city_list">
+						<li>北京市</li>
+						<li>北京市</li>
+						<li>北京市</li>
+					</ul>
+				</div>
+				<div class="register_region">
+					<span>选择区域</span>
+					<b class="glyphicon glyphicon-play"></b>
+					<ul style="display: none;" class="region_list">
+						<li>东城区</li>
+						<li>西城区</li>
+						<li>朝阳区</li>
+					</ul>
+				</div>
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item office_register_type">
+				<div id="office-type">事务所类型（多选）：</div>
+				<div class="office_type_group">
+					<label><input type="checkbox" name="">税务领域</label>
+					<label><input type="checkbox" name="">评估领域</label>
+					<label><input type="checkbox" name="">律法领域</label>
+					<label><input type="checkbox" name="">工程造价领域</label>
+					<label><input type="checkbox" name="">会计领域</label>
+				</div>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>手机号：</label>
+				<input type="text" maxlength="11" name="" id="office-phone" placeholder="请输入手机号码">
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item">
+				<label><i>*</i>短信验证码：</label>
+				<input type="text" name="" id="office-phone-num" placeholder="请输入手机验证码">
+				<a class="office_phone_num">获取验证码</a>
+				<p class="error"></p>
+			</div>
+			<div class="office_register_item office_register_formality">
+				<div class="office_formality"><i>*</i>执业形式：</div>
+				<label><input type="radio" onchange="certified()" name="formality" checked value="organization-certified">执业机构</label>
+				<label><input type="radio" id="personal" onchange="certified()" name="formality" value="personal-certified">执业个人</label>
+				<p class="error"></p>
+			</div>
+			<div style="display: none" id="personal-certified" class="office_register_item">
+				<label><i>*</i>本人身份证扫描件：</label>
+				<input style="display: none" type="file" class="file" name="upload" id="upload">
+                <input type="hidden" name="fileid" id="fileid" class="form-control">
+                <input type="hidden" name="filepath" id="filepath" class="form-control"
+                       value="{$jigoushiwusuo_info['filepath']}">
+                <img style="display: none" id="idpic_img" src="{$jigoushiwusuo_info['filepath']}" {if !$jigoushiwusuo_info['filepath']}class="hidden"{/if}
+                width="100">
+                <p class="error"></p>
+			</div>
+			<div id="organization-certified">
+				<div class="office_register_item">
+					<label><i>*</i>上传执业证件：</label>
+					<p>可以将至少一种执业证件扫描件上传至平台</p>
+					<p class="error"></p>
+				</div>
+				<div class="office_register_item">
+					<label>税务营业执照图片：</label>
+					<input style="display: none" type="file" class="file" name="upload" id="upload">
+	                <input type="hidden" name="fileid" id="fileid" class="form-control">
+	                <input type="hidden" name="filepath" id="filepath" class="form-control"
+	                       value="{$jigoushiwusuo_info['filepath']}">
+	                <img style="display: none" id="idpic_img" src="{$jigoushiwusuo_info['filepath']}" {if !$jigoushiwusuo_info['filepath']}class="hidden"{/if}
+	                width="100">
+				</div>
+				<div class="office_register_item">
+					<label>会计营业执照：</label>
+					<input style="display: none" type="file" class="file" name="upload" id="upload">
+	                <input type="hidden" name="fileid" id="fileid" class="form-control">
+	                <input type="hidden" name="filepath" id="filepath" class="form-control"
+	                       value="{$jigoushiwusuo_info['filepath']}">
+	                <img style="display: none" id="idpic_img" src="{$jigoushiwusuo_info['filepath']}" {if !$jigoushiwusuo_info['filepath']}class="hidden"{/if}
+	                width="100">
+				</div>
+				<div class="office_register_item">
+					<label>评估营业执照：</label>
+					<input style="display: none" type="file" class="file" name="upload" id="upload">
+	                <input type="hidden" name="fileid" id="fileid" class="form-control">
+	                <input type="hidden" name="filepath" id="filepath" class="form-control"
+	                       value="{$jigoushiwusuo_info['filepath']}">
+	                <img style="display: none" id="idpic_img" src="{$jigoushiwusuo_info['filepath']}" {if !$jigoushiwusuo_info['filepath']}class="hidden"{/if}
+	                width="100">
+				</div>
+				<div class="office_register_item">
+					<label>工程造价执照：</label>
+					<input style="display: none" type="file" class="file" name="upload" id="upload">
+	                <input type="hidden" name="fileid" id="fileid" class="form-control">
+	                <input type="hidden" name="filepath" id="filepath" class="form-control"
+	                       value="{$jigoushiwusuo_info['filepath']}">
+	                <img style="display: none" id="idpic_img" src="{$jigoushiwusuo_info['filepath']}" {if !$jigoushiwusuo_info['filepath']}class="hidden"{/if}
+	                width="100">
+				</div>
+			</div>
+			<button id="office-register-submit" class="office_register_submit">同意协议并立即注册</button>
+			<a class="office_agreement_btn">《瞄财网网络事务所注册和升级协议》</a>
+		</div>
+		<script type="text/javascript">
+				function certified(){
+					var value = $("input[name='formality']:checked").val();
+						$("#personal-certified").toggle();
+						$("#organization-certified").toggle();
+					// $(ele).attr("checked","true");
+					// $(ele).siblings().attr("checked","flase")
+					// console.log($('#personal').attr("checked")+ ' '+ $('#organization').attr("checked"))
+					
+				}
+		</script>
+		<script type="text/javascript">
+			(function(){
+				var province = $(".province_list");
+				var city = $(".city_list");
+				var region = $(".region_list");
+				$(".register_province").click(function(){
+					var that = $(this);
+					city.hide();
+					region.hide();
+					province.toggle();
+					province.find("li").click(function(){
+						var _province = $(this).text();
+						that.find("span").text(_province);
+					})
+				})
+				$(".register_city").click(function(){
+					var that = $(this);
+					province.hide();
+					region.hide();
+					city.toggle();
+					city.find("li").click(function(){
+						var _city = $(this).text();
+						that.find("span").text(_city);
+					})
+				})
+				$(".register_region").click(function(){
+					var that = $(this);
+					province.hide();
+					city.hide();
+					region.toggle();
+					region.find("li").click(function(){
+						var _region = $(this).text();
+						that.find("span").text(_region);
+					})
+				})
+			})()
+		</script>
+		<!-- <script type="text/javascript" src="http://www.miaocaiwang.com/static/js/uploadify/jquery.uploadify.min.js?r=0.97853000"></script> -->
+		<!-- <script type="text/javascript">
+            $(function () {
+                setTimeout(function () {
+                    uploadify({
+                        debug: false,
+                        text: '税务营业执照图片',
+                        auto: true,
+                        limit: 1,
+                        hide: false,
+                        height:36,
+                        width:170,
+                        size: "{$basic_config['max_size']}MB",
+                        exts: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'
+                    }, {
+                        sessionId: sessionId,
+                        fileType: 'sys',
+                        objType: 'auth'
+                    }, uploadResponse);
+                }, 500);
+            })
+            function uploadResponse(json) {
+                $("#filepath").val(json.msg.url);
+                $('#idpic_img').removeClass('hidden');
+                $('#idpic_img').prop('src', json.msg.url);
+            }
+            //会计事务所营业执照
+            $(function () {
+                setTimeout(function () {
+                    uploadify_b({
+                        debug: false,
+                        file: 'upload_b',
+                        text: '会计营业执照',
+                        auto: true,
+                        limit: 1,
+                        hide: false,
+                        height:36,
+                        width:170,
+                        size: "{$basic_config['max_size']}MB",
+                        exts: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'
+                    }, {
+                        sessionId: sessionId,
+                        fileType: 'sys',
+                        objType: 'auth'
+                    }, uploadResponse_b);
+                }, 500);
+            })
+            function uploadResponse_b(json) {
+                $("#filepath_b").val(json.msg.url);
+                $('#idpic_img_b').removeClass('hidden');
+                $('#idpic_img_b').prop('src', json.msg.url);
+            }
+            //评估事务所营业执照
+            $(function () {
+                setTimeout(function () {
+                    uploadify_c({
+                        debug: false,
+                        file: 'upload_c',
+                        text: '评估营业执照',
+                        auto: true,
+                        limit: 1,
+                        hide: false,
+                        height:36,
+                        width:170,
+                        size: "{$basic_config['max_size']}MB",
+                        exts: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'
+                    }, {
+                        sessionId: sessionId,
+                        fileType: 'sys',
+                        objType: 'auth'
+                    }, uploadResponse_c);
+                }, 500);
+            })
+            function uploadResponse_c(json) {
+                $("#filepath_c").val(json.msg.url);
+                $('#idpic_img_c').removeClass('hidden');
+                $('#idpic_img_c').prop('src', json.msg.url);
+            }
+            //工程造价事务所营业执照
+            $(function () {
+                setTimeout(function () {
+                    uploadify_d({
+                        debug: false,
+                        file: 'upload_d',
+                        text: '工程造价执照',
+                        auto: true,
+                        limit: 1,
+                        hide: false,
+                        height:36,
+                        width:170,
+                        size: "{$basic_config['max_size']}MB",
+                        exts: '*.jpg;*.jpeg;*.gif;*.png;*.bmp'
+                    }, {
+                        sessionId: sessionId,
+                        fileType: 'sys',
+                        objType: 'auth'
+                    }, uploadResponse_d);
+                }, 500);
+            })
+            function uploadResponse_d(json) {
+                $("#filepath_d").val(json.msg.url);
+                $('#idpic_img_d').removeClass('hidden');
+                $('#idpic_img_d').prop('src', json.msg.url);
+            }
+        </script> -->
+        <script type="text/javascript">
+        	(function(){
+        		var phoneNumGet = $(".office_phone_num");
+        		//填写表单验证
+        		$("input[type='text'],input[type='password'],textarea").focus(function(){
+        			var that = $(this);
+        			$(document).keyup(function(){
+        				officeValidat(that);
+        			})
+        		});
+        		//获取验证码
+        		phoneNumGet.bind('click',getcode);
+
+        		//提交表单验证
+        		$('#office-register-submit').click(function(){
+        			// var ele = $('.register_province')
+        			// var msg = '选择职业区域';
+        			// officeValidat(ele,msg)
+        		})
+        		function getcode(){;
+					var value = $("#office-phone").val();
+					var error = $(".office_phone_num").next();
+					var reg = new RegExp("^[0-9]*$");
+					if (value == '' || value.length != 11 || !reg.test(value)) {
+						error.text("手机号不正确")
+					}else{
+						error.text('');
+						phoneNumGet.unbind('click');
+						var count = 60;
+						var t = setInterval(function(){
+							count--;
+							phoneNumGet.text(count+'s');
+							if (count <= 0) {
+								clearInterval(t);
+								phoneNumGet.text("获取验证码");
+								phoneNumGet.bind('click',getcode);
+							}
+						},1000);
+					}
+				}
+        		function officeValidat(ele,Msg){
+        			var id = ele.attr('id');
+        			// id = (id==undefined) ? '':id;
+        			var error = ele.nextAll('.error');
+        			var value = ele.val();
+        			var reg = new RegExp("^[A-Za-z0-9]+$");
+        			var regEmail = /(^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+$)|(^$)/;
+        			var regPhone = new RegExp("^[0-9]*$"); 
+        			switch(id){
+        				case 'office-username':
+        					if (value == '') {
+        						error.text('账号不能为空');
+        					}else if(!reg.test(value)){
+        						error.text('请输入数字或者字母');
+        					}else if (value.length>12 || value.length<6) {
+        						error.text('请输入6~12的账号');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-password':
+        					if (value == '') {
+        						error.text('密码不能为空');
+        					}else if (value.length>16 || value.length<6) {
+        						error.text('请输入6~12的密码');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-repassword':
+        					if (value == '') {
+        						error.text('请确认密码');
+        					}else if (value != $("#office-password").val()) {
+        						error.text('两次输入密码不一致');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-email':
+        					if (value == '') {
+        						error.text('邮箱不能为空');
+        					}else if(!regEmail.test(value)){
+        						error.text('邮箱格式不正确');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-inviter':
+        					if (value == '') {
+        						error.text('邀请人不能为空');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-name':
+        					if (value == '') {
+        						error.text('姓名人不能为空');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-detail':
+        					error.css('top','90%');
+        					if (value == '') {
+        						error.text('简介人不能为空');
+        					}else if(value.length<60){
+        						error.text('简介不得少于60个字');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-phone':
+        					if (value == '') {
+        						error.text('手机号不能为空');
+        					}else if(!regPhone.test(value)){
+        						error.text('手机号填写不正确');
+        					}else if(value.length != 11){
+        						error.text('手机号码需要填写11位')
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+        				case 'office-phone-num':
+        					if (value == '') {
+        						error.text('验证码不能为空');
+        					}else if(value.length != 6){
+        						error.text('验证码是6位数字');
+        					}else{
+        						if (Msg == undefined) {
+        							error.text('');
+        						}else error.text(Msg);
+        					};
+        					break;
+						default:
+        					error.text(Msg);
+        					break;
+        			}
+        		} 
+        	})()
+        </script>
+		<div class="rg register_tab">
+			<h1><a href="ordinary_register.html">
+				<img src="images/office_register_icon.png">
+				免费注册企业个人账户				
+			</a></h1>
+			<ol class="register_statement">
+				<h2><img src="images/register_icon1.png">网络事务所注册的特色功能</h2>
+				<li><span class="sort_icon">1</span>实名认证后，交易保障。</li>
+				<li><span class="sort_icon">2</span>订单记录保存，随时随地查看</li>
+				<li><span class="sort_icon">3</span>关键位置推荐，惊喜不断</li>
+			</ol>
+			<div class="office_intruction">
+				<h3>网络事务所介绍</h3>
+				<p>瞄财网网络事务所是一个服务于个人及财税服务机构的网络创业空间。也是一个适应于大众创业，万众创新的财税服务平台化的创业空间。目的是让所有有志于从事财税服务行业的服务机构和人才能够做到个性化，开放化，平台化。用来服务于企业或个人，展现创客的形象和风采，展示创客的能力和案例，让更多的企业和个人了解财税创客，为财税创客带来更多的业务和资源。</p>
+				<h3>关于网络事务所的注意事项如下</h3>
+				<p>1、需要实名注册，凡是机构和个人均可注册网络事务所，机构一般需要提交资质，经过平台审核即可成为网络事务所的会员，并可以在平台上获取业务，开展服务。
+	    		<p>2、网络事务所注册主要分为：非执业人员、执业人员、执业机构三大类。</p>
+				<p>非执业人员可以发展业务并提交业务，但是不能独立承接业务。</p>
+				<p>执业人员可以依托地方会员中心资质开展业务承接</p>
+				<p>执业机构可以根据注册区域来承接业务。</p>
+				<p>三类网络事务所承接业务均按照平台分成规定获取分成收益。</p>
+	    		<p>关于以上说明如有异议和问题，请拨打客服电话：4000492366</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div style="display: none" class="release_agreement_bg">
+		<div class="office_agreement">
+	        <div class="agreement-header">
+	            <h2 class="agreement-title" style="padding-top:15px;text-align:center;">《瞄财网网络事务所注册和升级协议》</h2>
+	        </div>
+	        <p><!--{tag 瞄财网网络事务所注册和升级协议}--></p>
+	        <span id="close" class="glyphicon glyphicon-remove"></span>
+	    </div>
+	</div>
+	<script type="text/javascript">
+		$(".office_agreement_btn").click(function(){
+			$(".release_agreement_bg").show(100);
+		})
+		$("#close").click(function(){
+			$(".release_agreement_bg").hide(100);
+		})
+	</script>
+	<footer>
+		<div></div>
+    	<p>公司名称：瞄财网络科技（北京）有限公司   地址：北京市朝阳区朝阳路中国第一商城A座18G</p>
+        <p>客服电话：4000492366  客服邮箱：mcw@miaocaiwang.com</p>
+        <p>Powered by miaocai1.0 Copyright © 2015 瞄财网. All rights reserved 京ICP备14057654号-3</p>
+	</footer>
+</body>
+</html>

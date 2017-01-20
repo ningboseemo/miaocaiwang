@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="always" name="referrer">
+	<title>瞄财网</title>
+	<meta name="keywords" content="">
+	<meta name="discription" content="">
+	<link rel="shortcut icon" href="images/miaocai_icon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div class="content top">
+		<span class="glyphicon glyphicon-map-marker"></span>
+		<span class="top_city"><i>北京</i> 【<a href="#">切换城市</a>】</span>
+		<span>欢迎光临瞄财网！</span>
+		<ul class="rg top_nav">
+			<li class="top_nav_item">我是雇主 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">找事务所</a></li>
+					<li><a href="#">发布任务</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">我是事务所 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">交易管理</a></li>
+					<li><a href="#">进入店铺</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">联系客服 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">在线客服QQ：4000492366</a></li>
+					<li><a href="#">客服电话:400-049-2366</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="nav_container">
+		<div class="content">
+			<a class="logo" href="#"><img src="images/logo.png"></a>
+			<ul class="nav">
+				<li class="nav_item"><a href="index.html" class="nav_active">首页</a></li>
+				<li class="nav_item"><a target="_blank" href="http://wutongjuedu.miaocaiwang.com">瞄财商学院</a></li>
+				<li class="nav_item"><a href="free_suanshuibao.html">免费办财税</a></li>
+				<li class="nav_item"><a href="trade_highoffice.html">财税交易</a></li>
+				<li class="nav_item"><a href="news.html">财税资讯</a></li>
+				<li class="nav_item"><a href="help.html">帮助中心</a></li>
+			</ul>
+			<div class="search_container">
+				<div class="lf search_select">
+					<span class="search_select_cur">找事务所</span>
+					<span class="caret"></span>
+					<ul class="search_select_list">
+						<li>找事务所</li>
+						<li>找任务</li>
+					</ul>
+				</div>
+				<div class="rg search_input">
+					<input type="" name="">
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(".search_select").click(function(){
+					$(".search_select_list li").click(function(){
+						$(".search_select_cur").text($(this).text())
+					})
+					$(".search_select_list").toggle();
+				})
+			</script>
+			<div class="or_login_container">
+				<div class="user_login">
+					<a href="#"><img src="images/caichang.jpg">某某某</a>
+					<div class="user_informarion">
+						<div class="balance">账号余额 <span>￥20000</span></div>
+						<div class="index_news">
+							<span>我的订单(<b>0</b>) </span>
+							<span> 我的消息(<b>0</b>)</span>
+						</div>
+					</div>
+				</div>
+				<!-- <a class="login_btn" href="">登录</a>
+								或
+				<a class="login_btn" href="">注册</a> -->
+				<a class="rg require" href="">发布需求</a>
+			</div>
+		</div>
+	</div>
+	<!-- banner -->
+	<div class="banner_container">
+		<div class="banner content">
+			<ul>
+				<li><img src="images/banner1.jpg"></li>
+				<li><img src="images/banner1.jpg"></li>
+				<li><img src="images/banner1.jpg"></li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/unslider.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.banner').unslider({
+					infinite: true,
+					autoplay: true,
+					speed:1000,
+					delay:3000 
+					});
+			})
+		</script>
+	</div>
+	<!-- calssroom -->
+	<div class="content classroom_container">
+		<div class="lf classroom_case">
+			<h1 class="par_title">案例大讲堂 <a href="#">更多</a></h1>
+			<div class="classroom_case_item">
+				<div class="lf case_item_image">
+					<img src="images/case1.jpg">
+				</div>
+				<div class="rg classroom_case_detail">
+					<h3 class="classroom_case_time">2016-7-20  20:20 开播 <span class="role_icon_v">VIP专属</span></h3>
+					<h1 class="classroom_case_title">如何开具税控盘发票-办税员开票实训课程如何开具税控盘发票-办税员开票实...</h1>
+					<span class="classroom_case_other">主讲老师：某某某</span>
+					<span class="classroom_case_other">预计时长：2小时15分</span>
+					<button class="classroom_case_enlist" href="#">立即报名</button>
+				</div>
+			</div>
+		</div>
+		<div class="rg classroom_past">
+			<h1 class="par_title">往期大讲堂 <a href="#">更多</a></h1>
+			<div class="m_calss_container">
+				<div class="class_item">
+					<figure>
+						<img src="images/past1.jpg">
+						<figcaption>随到随学（共6节）</figcaption>
+					</figure>
+					<h2>课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称...</h2>
+					<div class="class_teacher">
+						<img src="images/caichang.jpg">
+						<span class="teacher_name">老师姓名</span>
+						<span>时长：1小时30分钟</span>
+					</div>
+					<div class="class_look">
+						<span class="role_icon_v">VIP专属</span>
+						<span class="glyphicon glyphicon-ok try_listen"></span>
+						<span class="try_listen">可试听</span>
+						<span class="rg">观看次数：200</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- classseeding -->
+	<div class="content class_seed">
+		<div class="lf direct_seeding">
+			<h1 class="par_title">直播课程 <a href="#">更多</a></h1>
+			<div class="b_class_container">
+				<div class="class_item">
+					<figure>
+						<img src="images/past1.jpg">
+						<figcaption>随到随学（共6节）</figcaption>
+					</figure>
+					<h2>课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称...</h2>
+					<div class="class_teacher">
+						<img src="images/caichang.jpg">
+						<span class="teacher_name">老师姓名</span>
+						<span>时长：1小时30分钟</span>
+					</div>
+					<div class="class_look">
+						<span class="role_icon_v">VIP专属</span>
+						<span class="glyphicon glyphicon-ok try_listen"></span>
+						<span class="try_listen">可试听</span>
+						<span class="rg">观看次数：200</span>
+					</div>
+				</div>
+				<div class="rg class_item">
+					<figure>
+						<img src="images/past1.jpg">
+						<figcaption>随到随学（共6节）</figcaption>
+					</figure>
+					<h2>课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称...</h2>
+					<div class="class_teacher">
+						<img src="images/caichang.jpg">
+						<span class="teacher_name">老师姓名</span>
+						<span>时长：1小时30分钟</span>
+					</div>
+					<div class="class_look">
+						<span class="role_icon_v">VIP专属</span>
+						<span class="glyphicon glyphicon-ok try_listen"></span>
+						<span class="try_listen">可试听</span>
+						<span class="rg">观看次数：200</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rg past_seed">
+			<h1 class="par_title">录播课程 <a href="#">更多</a></h1>
+			<div class="b_class_container">
+				<div class="class_item">
+					<figure>
+						<img src="images/past1.jpg">
+						<figcaption>随到随学（共6节）</figcaption>
+					</figure>
+					<h2>课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称...</h2>
+					<div class="class_teacher">
+						<img src="images/caichang.jpg">
+						<span class="teacher_name">老师姓名</span>
+						<span>时长：1小时30分钟</span>
+					</div>
+					<div class="class_look">
+						<span class="role_icon_v">VIP专属</span>
+						<span class="glyphicon glyphicon-ok try_listen"></span>
+						<span class="try_listen">可试听</span>
+						<span class="rg">观看次数：200</span>
+					</div>
+				</div>
+				<div class="rg class_item">
+					<figure>
+						<img src="images/past1.jpg">
+						<figcaption>随到随学（共6节）</figcaption>
+					</figure>
+					<h2>课程名称课程名称课程名称课程名称课程名称课程名称课程名称课程名称...</h2>
+					<div class="class_teacher">
+						<img src="images/caichang.jpg">
+						<span class="teacher_name">老师姓名</span>
+						<span>时长：1小时30分钟</span>
+					</div>
+					<div class="class_look">
+						<span class="role_icon_v">VIP专属</span>
+						<span class="glyphicon glyphicon-ok try_listen"></span>
+						<span class="try_listen">可试听</span>
+						<span class="rg">观看次数：200</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 事务所+专家 -->
+	<div class="content office_expert">
+		<div class="lf office_container">
+			<h1 class="par_title">推荐事务所 <a href="#">更多</a></h1>
+			<div class="office_list">
+				<div class="office_item">
+					<img src="images/office1.jpg">
+					<h2>事务所名称事务所名称事务所名...</h2>
+					<span class="glyphicon glyphicon-map-marker"></span>
+					<span>湖南省</span>
+					<span>长沙市</span>
+				</div>
+				<div class="office_item">
+					<img src="images/office2.jpg">
+					<h2>事务所名称事务所名称事务所名...</h2>
+					<span class="glyphicon glyphicon-map-marker"></span>
+					<span>湖南省</span>
+					<span>长沙市</span>
+				</div>
+				<div class="office_item">
+					<img src="images/office3.jpg">
+					<h2>事务所名称事务所名称事务所名...</h2>
+					<span class="glyphicon glyphicon-map-marker"></span>
+					<span>湖南省</span>
+					<span>长沙市</span>
+				</div>
+				<div class="office_item">
+					<img src="images/office4.jpg">
+					<h2>事务所名称事务所名称事务所名...</h2>
+					<span class="glyphicon glyphicon-map-marker"></span>
+					<span>湖南省</span>
+					<span>长沙市</span>
+				</div>
+				<div class="office_item">
+					<img src="images/office5.jpg">
+					<h2>事务所名称事务所名称事务所名...</h2>
+					<span class="glyphicon glyphicon-map-marker"></span>
+					<span>湖南省</span>
+					<span>长沙市</span>
+				</div>
+			</div>
+		</div>
+		<div class="rg expert_container">
+			<h1 class="par_title">专家推荐 <a href="#">更多</a></h1>
+			<div class="expert_list">
+				<div class="expert_item">
+					<img class="expert_photo" src="images/caichang.jpg">
+					<div class="rg expert_detail">
+						<h1 class="expert_name">专家名称<span>执业：3年</span></h1>
+						<p class="expert_title"><span>专家职称</span><span>专家职称</span><span>专家职称</span></p>
+						<p class="expert_title"><span class="glyphicon glyphicon-map-marker"></span><span>湖南省</span><span>长沙市</span></p>
+						<a class="advice " href="#">
+							<img src="images/zixun.png">
+							<span>咨询</span>
+						</a>
+						<a class="message" href="#">
+							<img src="images/liuyan.png">
+							<span>留言</span>
+						</a>
+					</div>
+				</div>
+				<div class="expert_item">
+					<img class="expert_photo" src="images/caichang.jpg">
+					<div class="rg expert_detail">
+						<h1 class="expert_name">专家名称<span>执业：3年</span></h1>
+						<p class="expert_title"><span>专家职称</span><span>专家职称</span><span>专家职称</span></p>
+						<p class="expert_title"><span class="glyphicon glyphicon-map-marker"></span><span>湖南省</span><span>长沙市</span></p>
+						<a class="advice " href="#">
+							<img src="images/zixun.png">
+							<span>咨询</span>
+						</a>
+						<a class="message" href="#">
+							<img src="images/liuyan.png">
+							<span>留言</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 热门需求 -->
+	<div class="content task_need">
+		<h1 class="par_title">
+			<span class="hot_need need_active">热门需求</span>
+			<span class="new_need">最新需求</span>
+			<a href="#">更多</a>
+		</h1>
+		<div class="how_solve">
+	    	<h2 class="lf">如何解决您的问题</h2>
+	        <div class="step rg">
+	        	<span><b>1.</b> 描述您的需求</span><img src="images/rg.png">            
+	            <span><b>2.</b> 发布成功后等待执业机构抢单</span><img src="images/rg.png">
+	            <span><b>3.</b> 筛选满意的执业机构</span><img src="images/rg.png">
+	            <span><b>4.</b> 验收确认订单</span><img src="images/rg.png">
+	            <span><b>5.</b> 支付任务赏金给执业机构并评价</span>
+	        </div>
+	    </div>
+	    <div class="task">
+	    	<div style="height:1px;"></div>
+	        	<ul id="task_list_1">
+	            	<li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	            </ul>
+	            <ul id="task_list_2" style="none">
+	            	<li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	                <li>
+	                	<h3><b>￥30000.00 - ￥50000.00</b><a href="#">涉税鉴证及税务代理服务业务招标</a></h3>
+	                    <p><span>某某某2发布</span> <span>查看 / 抢单：<i>110</i> /<i>0</i></span></p>
+	                </li>
+	            </ul>
+	    </div>
+	    <div class="how_hold">
+	    	<h2 class="lf">如何承接任务</h2>
+	        <div class="step rg">
+	        	<span><b>1.</b> 执业机构选择能够胜任的任务</span><img src="images/rg.png">
+	            <span><b>2.</b> 抢单并报价</span><img src="images/rg.png">
+	            <span><b>3.</b> 竞标</span><img src="images/rg.png">
+	            <span><b>4.</b> 中标后执行任务</span><img src="images/rg.png">
+	            <span><b>5.</b> 提交任务订单</span><img src="images/rg.png">
+	            <span><b>6.</b> 待雇主确认后获取赏金</span>
+	        </div>
+	    </div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(".new_need").click(function(){
+				$("#task_list_1").hide();
+				$("#task_list_2").show();
+				$(this).addClass("need_active").siblings().removeClass("need_active");
+			});
+			$(".hot_need").click(function(){
+				$("#task_list_1").show();
+				$("#task_list_2").hide();
+				$(this).addClass("need_active").siblings().removeClass("need_active");
+			})
+		})
+	</script>
+	<!-- 新闻 -->
+	<div class="content news_container">
+		<h1 class="par_title">往期大讲堂 <a href="#">更多</a></h1>
+		<div class="news_content">
+			<figure class="image_news">
+				<img src="images/new1.jpg">
+				<figcaption>北京商报：营改增二手大发二手大发...</figcaption>
+			</figure>
+			<figure class="image_news">
+				<img src="images/new1.jpg">
+				<figcaption>北京商报：营改增二手大发二手大发...</figcaption>
+			</figure>
+			<div class="text_news">
+				<ul class="text_news_title">
+					<li class="news_active">行业动态</li>
+					<li>瞄财动态</li>
+					<li>新闻动态</li>
+					<li>政策法规</li>
+					<li>安全交易</li>
+				</ul>
+				<ul class="text_news_list">
+					<li><a href="#">公司变更以及公司注销登记准备文件1</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+				</ul>
+				<ul style="display: none;" class="text_news_list">
+					<li><a href="#">公司变更以及公司注销登记准备文件2</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+				</ul>
+				<ul style="display: none;" class="text_news_list">
+					<li><a href="#">公司变更以及公司注销登记准备文件3</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+				</ul>
+				<ul style="display: none;" class="text_news_list">
+					<li><a href="#">公司变更以及公司注销登记准备文件4</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+				</ul>
+				<ul style="display: none;" class="text_news_list">
+					<li><a href="#">公司变更以及公司注销登记准备文件5</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+					<li><a href="#">已出售的没有的五证的企业自建的房屋，是什么什么得</a></li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				$(function(){
+					$(".text_news_title li").click(function(){
+						var newsNum = $(this).index();
+						$(this).addClass('news_active').siblings().removeClass("news_active");
+						for (var i = 0; i < 5; i++) {
+							if (newsNum == i) {
+								$(".text_news_list").eq(i).show();
+							}else{
+								$(".text_news_list").eq(i).hide();
+							}
+						}
+					})
+				})
+			</script>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="index_footer">
+    	<div class="friendly">
+        	<h1>友情链接</h1>
+            <div class="friendly_c">
+            	<div class="friendly_l"><img src="images/footer_r.png"></div>
+                <div class="friendly_contain">
+                    <ul>
+                        <li><img src="images/friend1.jpg"></li>
+                        <li><img src="images/friend2.jpg"></li>
+                        <li><img src="images/friend3.jpg"></li>
+                        <li><img src="images/friend4.jpg"></li>
+                        <li><img src="images/friend1.jpg"></li>
+                        <li><img src="images/friend2.jpg"></li>
+                    </ul>
+                </div>
+               	<div class="friendly_r"><img src="images/footer_r.png"></div>
+            </div>        	
+        </div>
+        <div class="footer_contain">
+        	<p><span><a href="#">关于我们 </a> </span>| <span><a href="#"> 合作伙伴 </a> </span>| <span> <a href="#"> 技术支持 </a> </span>| <span> <a href="#"> 法律声明 </a> </span>| <span> <a href="#"> 联系我们 </a> </span></p>
+            <p>公司名称：瞄财网络科技（北京）有限公司   地址：北京市朝阳区朝阳路中国第一商城A座18G<br>
+            客服电话：4000492366  客服邮箱：mcw@miaocaiwang.com</p>
+            <p>Powered by miaocai1.0 Copyright © 2015 瞄财网. All rights reserved 京ICP备14057654号-3</p>
+            <img src="images/footer1.jpg">
+            <img src="images/footer2.jpg">
+            <img src="images/footer3.jpg">
+            <img src="images/footer4.jpg">
+            <img src="images/footer5.jpg">
+            <img src="images/footer6.jpg">
+            <img src="images/footer7.jpg">
+        </div>
+    </div>	
+</body>
+</html>

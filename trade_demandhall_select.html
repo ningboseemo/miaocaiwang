@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="always" name="referrer">
+	<title>瞄财网</title>
+	<meta name="keywords" content="">
+	<meta name="discription" content="">
+	<link rel="shortcut icon" href="images/miaocai_icon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/trade.css">
+
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div class="content top">
+		<span class="glyphicon glyphicon-map-marker"></span>
+		<span class="top_city"><i>北京</i> 【<a href="#">切换城市</a>】</span>
+		<span>欢迎光临瞄财网！</span>
+		<ul class="rg top_nav">
+			<li class="top_nav_item">我是雇主 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">找事务所</a></li>
+					<li><a href="#">发布任务</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">我是事务所 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">交易管理</a></li>
+					<li><a href="#">进入店铺</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">联系客服 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">在线客服QQ：4000492366</a></li>
+					<li><a href="#">客服电话:400-049-2366</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="nav_container">
+		<div class="content">
+			<a class="logo" href="#"><img src="images/logo.png"></a>
+			<ul class="nav">
+				<li class="nav_item"><a href="index.html">首页</a></li>
+				<li class="nav_item"><a target="_blank" href="http://wutongjuedu.miaocaiwang.com">瞄财商学院</a></li>
+				<li class="nav_item"><a href="free_suanshuibao.html">免费办财税</a></li>
+				<li class="nav_item"><a href="trade_highoffice.html" class="nav_active">财税交易</a></li>
+				<li class="nav_item"><a href="news.html">财税资讯</a></li>
+				<li class="nav_item"><a href="help.html">帮助中心</a></li>
+			</ul>
+			<div class="search_container">
+				<div class="lf search_select">
+					<span class="search_select_cur">找事务所</span>
+					<span class="caret"></span>
+					<ul class="search_select_list">
+						<li>找事务所</li>
+						<li>找任务</li>
+					</ul>
+				</div>
+				<div class="rg search_input">
+					<input type="" name="">
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(".search_select").click(function(){
+					$(".search_select_list li").click(function(){
+						$(".search_select_cur").text($(this).text())
+					})
+					$(".search_select_list").toggle();
+				})
+			</script>
+			<div class="or_login_container">
+				<div class="user_login">
+					<a href="#"><img src="images/caichang.jpg"></a>
+					<a href="#">某某某</a>
+					<div class="user_informarion">
+						<div class="balance">账号余额 <span>￥20000</span></div>
+						<div class="index_news">
+							<span>我的订单(<b>0</b>) </span>
+							<span> 我的消息(<b>0</b>)</span>
+						</div>
+					</div>
+				</div>
+				<a class="rg require" href="">发布需求</a>
+			</div>
+		</div>
+	</div>
+	<div class="next_nav">
+		<div class="content next_nav_container">
+			<ul class="next_nav_list">
+				<li class="next_nav_item next_nav_active"><a href="trade_demandhall.html">需求大厅</a></li>
+				<li class="next_nav_item"><a href="trade_office.html">网络事务所</a></li>
+				<li class="next_nav_item"><a href="trade_highoffice.html">高端服务区</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="position">
+			<span>当前位置：</span>
+			<a href="index.html">首页</a>>
+			<a href="trade_highoffice.html">财税交易</a>>
+			<a href="trade_demandhall.html">需求大厅</a>>
+			<a href="">税务顾问</a>
+		</div>
+		<div class="office_search">
+			<input type="text" name="office_search" placeholder="请在当前条件下搜索">
+			<span class="glyphicon glyphicon-search"></span>
+		</div>
+	</div>
+	<div class="content demand_classify demand_classify_child">
+		<div class="demand_classify_container demand_classify_bg">
+			<span>我要节税</span>
+			<a class="demand_classify_item demand_classify_active">税务顾问</a>
+			<a class="demand_classify_item">税务制定服务</a>
+		</div>
+		<div class="demand_classify_container">
+			<span>业务分类</span>
+			<a class="demand_classify_item demand_classify_active">全部</a>
+			<a class="demand_classify_item">专家咨询</a>
+			<a class="demand_classify_item">其它</a>
+		</div>
+	</div>
+	<div class="content demand_sort">
+		<div class="demand_region">
+			<span>所在区域</span><i class="glyphicon glyphicon-chevron-down"></i>
+			<ul style="display: none;" class="demand_region_prorince">
+				<li><b>所有地区</b></li>
+				<li>
+					<b>北京</b>
+					<ul class="demand_region_city">
+						<li>西城区</li>
+						<li>东城区</li>
+						<li>朝阳区</li>
+						<li>海淀区</li>
+					</ul>
+				</li>
+				<li><b>上海</b></li>
+			</ul>
+		</div>
+		<div class="deposit_state">
+			<span>订金状态</span><i class="glyphicon glyphicon-chevron-down"></i>
+			<ul style="display: none" class="deposit_state_select">
+				<li>全部</li>
+				<li>未付订金</li>
+				<li>已付订金</li>
+			</ul>
+		</div>
+		<div class="rg demand_sort_slect">
+			<ul>
+				<li class="overall_sort"><a href=""> 综合</a></li>
+				<li class="rank_sort"><a href=""> 发布时间 <span class="glyphicon glyphicon-arrow-up"></span></a></li>
+				<li class="good_sort"><a href=""> 截止时间 <span class="glyphicon glyphicon-arrow-down"></span></a></li>
+				<li class="income_sort"><a href=""> 浏览量</a></li>
+				<li class="income_sort"><a href=""> 价格</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content demand_list_head">
+			<span>名称</span>
+			<span>发布方</span>
+			<span>预算</span>
+			<span>查看/投标</span>
+			<span>状态</span>
+	</div>
+	<div class="content demand_container">
+		<ul class="demand_list">
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+				<li class="demand_item"><a href="">
+					<span class="demand_name">
+						明确研究开发费用的加计扣除明确研究开发费明确研...
+					</span>
+					<span class="demand_people">株洲金轮房地产开发有限公司公</span>
+					<span class="demand_budget">￥60,000.00-￥70,000.00</span>
+					<span class="demand_look">323/24</span>
+					<span class="demand_state">2个月后截止</span>
+					<p class="demand_discription">需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要需求摘要...</p>
+				</a></li>
+		</ul>
+		<div class="page_container">
+			<a class="page_btn" href="#">上一页</a>
+			<a class="page_num page_nactive" href="#">1</a>
+			<a class="page_num" href="#">2</a>
+			<a class="page_num" href="#">3</a>
+			<a class="page_num" href="#">4</a>
+			<a class="page_btn" href="#">下一页</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			var region = $(".demand_region");
+			var provinces = $(".demand_region_prorince");
+			var citys = $(".demand_region_city");
+			var depositState = $(".deposit_state");
+			var depositSlect = $(".deposit_state_select");
+			region.click(function(){
+				depositSlect.hide();
+				provinces.toggle();
+				var _city = '';
+				var _province = '';
+				provinces.find("li").click(function(){
+					_province = $(this).find("b").text();
+					region.find("span").text(_province);
+				})
+				citys.find("li").click(function(){
+					_province = $(this).parent().parent().find("b").text();
+					_city = $(this).text();
+					region.find("span").text(_province+' '+_city);
+					provinces.hide();
+					return false;
+				})
+			});
+
+			depositState.click(function(){
+				provinces.hide();
+				depositSlect.toggle();
+				var _state = '';
+				depositSlect.find("li").click(function(){
+					_state = $(this).text();
+					depositState.find("span").text(_state);
+				})
+			})
+
+		})()
+	</script>
+	<footer>
+		<div></div>
+    	<p>公司名称：瞄财网络科技（北京）有限公司   地址：北京市朝阳区朝阳路中国第一商城A座18G</p>
+        <p>客服电话：4000492366  客服邮箱：mcw@miaocaiwang.com</p>
+        <p>Powered by miaocai1.0 Copyright © 2015 瞄财网. All rights reserved 京ICP备14057654号-3</p>
+	</footer>
+</body>
+</html>

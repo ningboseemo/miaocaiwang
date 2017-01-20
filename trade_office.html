@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="always" name="referrer">
+	<title>瞄财网</title>
+	<meta name="keywords" content="">
+	<meta name="discription" content="">
+	<link rel="shortcut icon" href="images/miaocai_icon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/trade.css">
+
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div class="content top">
+		<span class="glyphicon glyphicon-map-marker"></span>
+		<span class="top_city"><i>北京</i> 【<a href="#">切换城市</a>】</span>
+		<span>欢迎光临瞄财网！</span>
+		<ul class="rg top_nav">
+			<li class="top_nav_item">我是雇主 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">找事务所</a></li>
+					<li><a href="#">发布任务</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">我是事务所 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">交易管理</a></li>
+					<li><a href="#">进入店铺</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">联系客服 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">在线客服QQ：4000492366</a></li>
+					<li><a href="#">客服电话:400-049-2366</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="nav_container">
+		<div class="content">
+			<a class="logo" href="#"><img src="images/logo.png"></a>
+			<ul class="nav">
+				<li class="nav_item"><a href="index.html">首页</a></li>
+				<li class="nav_item"><a target="_blank" href="http://wutongjuedu.miaocaiwang.com">瞄财商学院</a></li>
+				<li class="nav_item"><a href="free_suanshuibao.html">免费办财税</a></li>
+				<li class="nav_item"><a href="trade_highoffice.html" class="nav_active">财税交易</a></li>
+				<li class="nav_item"><a href="news.html">财税资讯</a></li>
+				<li class="nav_item"><a href="help.html">帮助中心</a></li>
+			</ul>
+			<div class="search_container">
+				<div class="lf search_select">
+					<span class="search_select_cur">找事务所</span>
+					<span class="caret"></span>
+					<ul class="search_select_list">
+						<li>找事务所</li>
+						<li>找任务</li>
+					</ul>
+				</div>
+				<div class="rg search_input">
+					<input type="" name="">
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(".search_select").click(function(){
+					$(".search_select_list li").click(function(){
+						$(".search_select_cur").text($(this).text())
+					})
+					$(".search_select_list").toggle();
+				})
+			</script>
+			<div class="or_login_container">
+				<div class="user_login">
+					<a href="#"><img src="images/caichang.jpg"></a>
+					<a href="#">某某某</a>
+					<div class="user_informarion">
+						<div class="balance">账号余额 <span>￥20000</span></div>
+						<div class="index_news">
+							<span>我的订单(<b>0</b>) </span>
+							<span> 我的消息(<b>0</b>)</span>
+						</div>
+					</div>
+				</div>
+				<a class="rg require" href="">发布需求</a>
+			</div>
+		</div>
+	</div>
+	<div class="next_nav">
+		<div class="content next_nav_container">
+			<ul class="next_nav_list">
+				<li class="next_nav_item"><a href="trade_demandhall.html">需求大厅</a></li>
+				<li class="next_nav_item next_nav_active"><a href="trade_office.html">网络事务所</a></li>
+				<li class="next_nav_item"><a href="trade_highoffice.html">高端服务区</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="position">
+			<span>当前位置：</span>
+			<a href="index.html">首页</a>>
+			<a href="trade_highoffice.html">财税交易</a>>
+			<a href="">网络事务所</a>
+		</div>
+		<div class="office_search">
+			<input type="text" name="office_search" placeholder="请在当前条件下搜索">
+			<span class="glyphicon glyphicon-search"></span>
+		</div>
+	</div>
+	<div class="content office_classify">
+		<div class="work_type_classify">
+			<span>执业类型</span>
+			<a class="office_classify_item office_classify_acitve">全部</a>
+			<a class="office_classify_item">执业个人</a>
+			<a class="office_classify_item">执业机构</a>
+		</div>
+		<div class="office_type_classify">
+			<span>事务所类型</span>
+			<a class="office_classify_item office_classify_acitve">全部</a>
+			<a class="office_classify_item">税务业务</a>
+			<a class="office_classify_item">会计业务</a>
+			<a class="office_classify_item">财务业务</a>
+			<a class="office_classify_item">申报业务</a>
+			<a class="office_classify_item">代开业务</a>
+		</div>
+	</div>
+	<div class="content office_sort">
+		<div class="office_region">
+			<span>所在区域</span><i class="glyphicon glyphicon-chevron-down"></i>
+			<ul style="display: none;" class="office_region_prorince">
+				<li><b>所有地区</b></li>
+				<li>
+					<b>北京</b>
+					<ul class="office_region_city">
+						<li>西城区</li>
+						<li>东城区</li>
+						<li>朝阳区</li>
+						<li>海淀区</li>
+					</ul>
+				</li>
+				<li><b>上海</b></li>
+			</ul>
+		</div>
+		<div class="certification">
+			<span id="certification_box" data-value="false"></span>
+			<label for="certification_box">实名认证</label>
+		</div>
+		<div class="rg office_sort_slect">
+			<ul>
+				<li class="overall_sort">综合</li>
+				<li class="rank_sort">等级 <span class="glyphicon glyphicon-arrow-up"></span></li>
+				<li class="good_sort">好评率 <span class="glyphicon glyphicon-arrow-down"></span></li>
+				<li class="income_sort">收入</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function(){
+			var region = $(".office_region");
+			var provinces = $(".office_region_prorince");
+			var citys = $(".office_region_city");
+			region.click(function(){
+				provinces.toggle();
+				var _city = '';
+				var _province = '';
+				provinces.find("li").click(function(){
+					_province = $(this).find("b").text();
+					region.find("span").text(_province);
+				})
+				citys.find("li").click(function(){
+					_province = $(this).parent().parent().find("b").text();
+					_city = $(this).text();
+					region.find("span").text(_province+' '+_city);
+					provinces.hide();
+					return false;
+				})
+			});
+
+			var certification = $("#certification_box");
+			$(".certification").click(function(){
+				if (certification.attr("data-value") == "true") {
+					certification.css("background","#fafafa");
+					certification.attr("data-value","false");
+				}else{
+					certification.css("background","#007ef2");
+					certification.attr("data-value","true");
+				}
+				console.log(certification.attr("data-value"));
+			})
+
+		})()
+	</script>
+	<div class="content office_container">
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="office_item">
+			<img src="images/office.jpg">
+			<div class="office_detail">
+				<h1 class="office_name">瞄财德信网络事务所 <span class="office_rank">A级事务所</span></h1>
+				<div class="office_service">服务范围：税务业务，会计业务</div>
+				<div class="office_type">
+					<span>执业类型：执业个人</span>|
+					<span><i class="glyphicon glyphicon-map-marker"></i>北京市  东城区</span>
+				</div>
+				<div class="office_introduce">事务所简介：瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所瞄财德信网络事务所务所瞄德信网络事</div>
+			</div>
+			<div class="office_contact">
+				<a class="enter_shop" href="#">进入店铺</a>
+				<a class="contact_our" href="#">联系我</a>
+				<div class="trade_money">
+					<span>￥20,000.00</span>
+					<b>最近3月成交</b>
+				</div>
+				<div class="good_rate">
+					<span>100%</span>
+					<b>好评率</b>
+				</div>
+			</div>
+		</div>
+		<div class="page_container">
+			<a class="page_btn" href="#">上一页</a>
+			<a class="page_num page_nactive" href="#">1</a>
+			<a class="page_num" href="#">2</a>
+			<a class="page_num" href="#">3</a>
+			<a class="page_num" href="#">4</a>
+			<a class="page_btn" href="#">下一页</a>
+		</div>
+	</div>
+	<footer>
+		<div></div>
+    	<p>公司名称：瞄财网络科技（北京）有限公司   地址：北京市朝阳区朝阳路中国第一商城A座18G</p>
+        <p>客服电话：4000492366  客服邮箱：mcw@miaocaiwang.com</p>
+        <p>Powered by miaocai1.0 Copyright © 2015 瞄财网. All rights reserved 京ICP备14057654号-3</p>
+	</footer>
+</body>
+</html>

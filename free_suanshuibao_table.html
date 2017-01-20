@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="always" name="referrer">
+	<title>瞄财网</title>
+	<meta name="keywords" content="">
+	<meta name="discription" content="">
+	<link rel="shortcut icon" href="images/miaocai_icon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/free.css">
+
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div class="content top">
+		<span class="glyphicon glyphicon-map-marker"></span>
+		<span class="top_city"><i>北京</i> 【<a href="#">切换城市</a>】</span>
+		<span>欢迎光临瞄财网！</span>
+		<ul class="rg top_nav">
+			<li class="top_nav_item">我是雇主 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">找事务所</a></li>
+					<li><a href="#">发布任务</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">我是事务所 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">交易管理</a></li>
+					<li><a href="#">进入店铺</a></li>
+				</ul>
+			</li>
+			<li class="top_nav_item">联系客服 <span class="caret"></span>
+				<ul class="top_nav_nex">
+					<li><a href="#">在线客服QQ：4000492366</a></li>
+					<li><a href="#">客服电话:400-049-2366</a></li>
+					<li><a href="#">帮助中心</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="inside_top">
+		<div class="content">
+			<a href="index.html"><img src="images/logo.png"></a>
+			<h1>算税宝</h1>
+		</div>
+	</div>
+	<div class="content cur_position">
+		<a href="#">免费办财税</a>>
+		<a href="#">算税宝</a>>
+		<a href="#">综合项</a>>
+		<a href="#">2011年9月后工资薪金扣除费用3500（4800）元应纳个人所得税计算表</a>
+	</div>
+	<div class="content suanshui_table">
+		<h1>2011年9月后工资薪金扣除费用3500（4800）元应纳个人所得税计算表</h1>
+		<table id="suan-table">
+			<tbody>
+			<tr>
+				<th>姓 名</th>
+				<th>应发工资</th>
+				<th>加班工资</th>
+				<th>月 奖</th>
+				<th>其它收入</th>
+				<th>住房公积金</th>
+				<th>医疗保险</th>
+				<th>养老保险</th>
+				<th>其它扣除</th>
+				<th>费用扣除标准</th>
+			</tr>
+			<tr>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+				<td contenteditable="true">1</td>
+			</tr>	
+			</tbody>
+		</table>
+		<a class="add_table">+</a>
+		<a class="table_down" href="#"><span class="glyphicon glyphicon-save"></span>保存并下载</a>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			var TdNum = $("#suan-table th").length;
+			var AddBtn = $(".add_table");
+			var AddTr = $("#suan-table tbody").html();
+			AddBtn.click(function(){
+				AddTr += "<tr>";
+				for (var i = 0; i < TdNum; i++) {
+					AddTr += "<td contenteditable='true'></td>";
+			 	}
+			 	AddTr += "</tr>";
+			 	console.log(AddTr);
+			 	$("#suan-table tbody").html(AddTr);
+			 	console.log($("#suan-table tbody tr").length-2);
+			 	AddBtn.css("top",200+($("#suan-table tbody tr").length-2)*42+'px');
+			 	console.log(AddBtn.css('top'))
+			})
+		})
+	</script>
+	<footer>
+		<div></div>
+    	<p>公司名称：瞄财网络科技（北京）有限公司   地址：北京市朝阳区朝阳路中国第一商城A座18G</p>
+        <p>客服电话：4000492366  客服邮箱：mcw@miaocaiwang.com</p>
+        <p>Powered by miaocai1.0 Copyright © 2015 瞄财网. All rights reserved 京ICP备14057654号-3</p>
+	</footer>
+</body>
+</html>

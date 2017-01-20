@@ -1,0 +1,240 @@
+@charset "utf-8";
+/* CSS Document */
+/*help.css*/
+
+.help_container{
+    margin-top: 35px;
+    clear: both;
+    min-height: 677px;
+}
+
+.help_nav{
+	width: 226px;
+	display: inline-block;
+}
+.help_content{
+	width: 944px;
+	display: inline-block;
+	float: right;
+	height: 100%;
+	/* box-shadow: -1px 1px 3px #eee; */
+}
+.help_title{
+	width: 100%;
+	height: 62px;
+	background: #eff2f7;
+	color: #333;
+	/* text-align: center; */
+	line-height: 62px;
+	font-size: 20px;
+	display: block;
+	padding-left: 20px;
+}
+.help_title img{
+	line-height: 62px;
+	vertical-align: -5px;
+}
+.help_content .help_title{
+	background: url(../images/help_title.jpg);
+	text-align: center;
+	display: inline-block;
+}
+.help_search{
+	height: 38px;
+	width: 400px;
+	/* margin:12px auto; */
+	padding: 0;
+	margin-top: 12px;
+	margin-left: 223px;
+}
+.help_search input{
+	height: 36px;
+	width: 304px;
+	border:1px #ccc solid;
+	padding-left: 10px;
+	font-size: 14px;
+	/* vertical-align: -10px; */
+	display: block;
+	float: left;
+	background: #fff;
+	line-height: 36px;
+}
+.help_search button{
+	font-size: 14px;
+	color: #fff;
+	background: #007ef2;
+	width: 75px;
+	height: 36px;
+	line-height: 36px;
+	float: right;
+}
+.help_nav_item{
+	width: 100%;
+}
+.help_nav_title{
+	height: 42px;
+	line-height: 42px;
+	background: #eff2f7;
+	color: #333;
+	font-size: 15px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	width: 100%;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.help_nav_list{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	background: #fff;
+	font-size: 14px;
+	color: #333;
+	line-height: 34px;
+	padding-left: 46px;
+	box-shadow: 0 0 1px #eee;
+}
+.help_primary_task,.help_primary_miaocai{
+	width: 666px;
+	display: inline-block;
+	background: #fff;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.help_index_title{
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 20px;
+	color: #333;
+	line-height: 42px;
+	height: 42px;
+	font-size: 15px;
+	background: #eff2f7;
+}
+.help_miaocai_step,.hlep_task_step{
+	padding: 35px 55px;
+	padding-right: 0px;
+}
+.hlep_task_step .step a,
+.help_miaocai_step .step a{
+	display: inline-block;
+	width: 73px;
+	height: 73px;
+	background: #3093ee;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 73px;
+}
+.hlep_task_step .step s ,
+.help_miaocai_step .step s{
+	content: '';
+	/* border-top: 3px #007ef2 dotted; */
+	display: inline-block;
+	width: 62px;
+	vertical-align: 4px;
+	text-decoration: none;
+	letter-spacing: 5px;
+	color: #3093ee;
+	font-size: 25px;
+}
+.help_miaocai_step .step s{
+	width: 144px;
+}
+.hlep_task_step .step{
+	width: 160px;
+	display: inline-block;
+}
+.help_miaocai_step .step{
+	width: 241px;
+	display: inline-block;
+}
+.hlep_task_step .step:last-child,
+.help_miaocai_step .step:last-child{
+	width: 117px;
+}
+.hlep_task_step .step  i,
+.help_miaocai_step .step  i{
+	color: #3093ee;
+}
+.hlep_task_step .step span,
+.help_miaocai_step .step span{
+	text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: -25%;
+	width: 157px;
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+}
+.help_miaocai_step .step span{width: 184px;}
+.hlep_task_step .step:last-child span,
+.help_miaocai_step .step:last-child span{
+	width: 130px;
+}
+.help_new,.help_popular{
+	width: 267px;
+	/* height: 194px; */
+	display: inline-block;
+	float: right;
+	background: #fff;
+	margin-top: 5px;
+	box-sizing: border-box;
+	/* padding: 0 20px; */
+	padding-bottom: 14px;
+}
+.help_new ul,.help_popular ul{
+	list-style: inside;
+	padding: 0 20px;
+}
+.help_new li,.help_popular li{
+	color: #0044dd;
+	font-size: 12px;
+	margin-top: 9px;
+	width: 100%;
+	white-space: normal;
+}
+.help_new{
+	margin-top: -10px;
+}
+.help_content_item{
+	width: 100%;
+	background: #fff;
+	min-height: 500px;
+	margin-top: 5px;
+	box-shadow: -1px 1px 3px #eee;
+}
+.help_content_list{
+	background: #fff;
+	padding: 25px 30px;
+	box-sizing: border-box;
+	margin-top: 13px;
+}
+.hlep_quetion_title{
+	position: relative;
+	border-top: 1px #ccc solid;
+}
+.hlep_quetion_title span{
+	color: #333;
+	font-size: 14px;
+	position: relative;
+	display: inline-block;
+	top: -13px;
+	background: #fff;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+}
+.hlep_quetion_slide{
+	float: right;
+	border: 1px #ccc solid;
+	width: 56px;
+	height: 22px;
+	border-radius: 11px;
+	border: 1px #ccc solid;
+	font-size: 12px;
+}
+.hlep_solve{
+	font-size: 14px;
+	color: #333;
+}
